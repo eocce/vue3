@@ -3,9 +3,9 @@ import Home from '@/views/Home.vue'
 import Login from '@/views/Login.vue'
 import Admin from '@/views/Admin.vue'
 import register from '@/views/register.vue'
-import UserApp from "@/views/UserApp.vue";
 import ChangePassword from "@/views/ChangePassword.vue";
 import DataDirectory from "@/views/DataDirectory.vue";
+import DataQuery from "@/views/DataQuery.vue";
 
 const routes = [
   {
@@ -29,11 +29,6 @@ const routes = [
     component: Admin
   },
   {
-    path: '/userapp',
-    name: 'UserApp',
-    component: UserApp
-  },
-  {
     path: '/change-password',
     name: 'ChangePassword',
     component: ChangePassword
@@ -42,6 +37,11 @@ const routes = [
     path: '/data-directory',
     name: 'data-directory',
     component: DataDirectory
+  },
+  {
+    path: '/DataQuery',
+    name: 'DataQuery',
+    component: DataQuery
   },
   // 添加更多的路由...
 ]

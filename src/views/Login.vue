@@ -35,7 +35,7 @@ export default {
         console.log(response);
         // 你可能想要在这里保存用户的登录状态和令牌
         localStorage.setItem('token', response.data.token);
-        this.$router.push({ name: 'UserApp' });  // 跳转到用户应用页面
+        this.$router.push({ name: 'data-directory' });  // 跳转到用户应用页面
       })
       .catch(error => {
         // 处理错误

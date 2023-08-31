@@ -2,7 +2,7 @@
   <nav class="navbar-container">
     <div class="navbar-title">遥感数据管理系统</div>
     <div class="navbar-links">
-      <router-link to="/data-query">数据查询</router-link>
+      <router-link to="/DataQuery">数据查询</router-link>
       <router-link to="/data-directory">数据目录树浏览</router-link>
       <router-link to="/download-list">数据下载清单</router-link>
       <router-link to="/faq">FAQ</router-link>
