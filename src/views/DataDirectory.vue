@@ -45,7 +45,6 @@
                      @mouseup="endDrag"
                      @mouseleave="endDrag">
             </div>
-            123
             <td>{{ item.id }}</td>
             <td>{{ item.zname }}</td>
             <td>{{ item.ProductTime }}</td>
