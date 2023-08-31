@@ -127,19 +127,28 @@ export default {
       // TODO: 实现下载选中的功能
     },
 
-    downloadItem(itemId) {
-      axios.get(`http://127.0.0.1:8000/api/v1/download_data/${itemId}/`, {
-        headers: {
-          'Authorization': `Token ${localStorage.getItem('token')}`
-        }
-      })
-      .then(response => {
-        // TODO: 处理下载逻辑
-      })
-      .catch(error => {
-        console.error("Error downloading item:", error);
-      });
-    },
+    downloadItem(data_id) {
+        axios({
+          method: 'GET',
+          url: `http://127.0.0.1:8000/download_data/${data_id}/`,
+          headers: {
+            'Authorization': `Token ${localStorage.getItem('token')}`
+          },
+          responseType: 'blob'  // 表示返回的数据是一个二进制文件
+        })
+        .then(response => {
+          const url = window.URL.createObjectURL(new Blob([response.data]));
+          const link = document.createElement('a');
+          link.href = url;
+          link.setAttribute('download', `image_${data_id}.7z`);  // 设置下载文件名
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        })
+        .catch(error => {
+          console.error("Error downloading item:", error);
+        });
+      },
     getImageUrl(id) {
         return `http://127.0.0.1:8000/get_image/${id}/`;
     },
