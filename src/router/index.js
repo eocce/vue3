@@ -6,6 +6,7 @@ import register from '@/views/register.vue'
 import ChangePassword from "@/views/ChangePassword.vue";
 import DataDirectory from "@/views/DataDirectory.vue";
 import DataQuery from "@/views/DataQuery.vue";
+import FAQ from "@/views/FAQ.vue";
 
 const routes = [
   {
@@ -42,6 +43,11 @@ const routes = [
     path: '/DataQuery',
     name: 'DataQuery',
     component: DataQuery
+  },
+  {
+    path: '/faq',
+    name: 'FAQ',
+    component: FAQ
   },
   // 添加更多的路由...
 ]
